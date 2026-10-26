@@ -1,0 +1,120 @@
+{
+  "schema": "repo-guard/projection-check/v0",
+  "entries": [
+    {
+      "state": "live",
+      "model": {
+        "schema": "repo-guard/projection-model/v0",
+        "id": "home-heat-water.docs.readme",
+        "sources": [
+          {
+            "id": "presentation-model",
+            "kind": "repository_content",
+            "path": "model/readme-model.json",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "renderer",
+            "kind": "repository_content",
+            "path": "scripts/render-readme.mjs",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "requirement-HW-AES",
+            "kind": "repository_content",
+            "path": "requirements/HW-AES.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "requirement-HW-CORE",
+            "kind": "repository_content",
+            "path": "requirements/HW-CORE.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "requirement-HW-HEAT",
+            "kind": "repository_content",
+            "path": "requirements/HW-HEAT.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "requirement-HW-PROCESS",
+            "kind": "repository_content",
+            "path": "requirements/HW-PROCESS.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "requirement-HW-WATER",
+            "kind": "repository_content",
+            "path": "requirements/HW-WATER.rg.yaml",
+            "algorithm": "sha256"
+          }
+        ],
+        "target": {
+          "path": "README.md",
+          "ownership": "generated"
+        },
+        "generator": {
+          "contract_id": "home-heat-water/readme-md-db/v1"
+        },
+        "required_evidence": []
+      },
+      "build": {
+        "schema": "repo-guard/projection-build-record/v0",
+        "projection_id": "home-heat-water.docs.readme",
+        "model_identity": "a093d5c6d517a3de45dc8f87c53fc553f702a8e00bc702ed07cd70b7646a5166",
+        "source_identities": [
+          {
+            "source_id": "presentation-model",
+            "algorithm": "sha256",
+            "digest": "fcd7a22da84301b5a873a60ce0ee402aaa5ae6398ff6c9f6239d0875e195c4fd"
+          },
+          {
+            "source_id": "renderer",
+            "algorithm": "sha256",
+            "digest": "9fe33b99bc5d0198836551f3bbcc642131617e547e7495cf263150a84395b15c"
+          },
+          {
+            "source_id": "requirement-HW-AES",
+            "algorithm": "sha256",
+            "digest": "495eb183c175d0ef2caf64a2758e222699c40dd5028c3372e33231cad898bcaa"
+          },
+          {
+            "source_id": "requirement-HW-CORE",
+            "algorithm": "sha256",
+            "digest": "829813758fa950b99a3ce023f48e3fae952ada62b6114469a9b19bc90507bf57"
+          },
+          {
+            "source_id": "requirement-HW-HEAT",
+            "algorithm": "sha256",
+            "digest": "2d58b97bcc74772cc6e5011d25384051ef7fe7d8ce9286b0331739db3b61354a"
+          },
+          {
+            "source_id": "requirement-HW-PROCESS",
+            "algorithm": "sha256",
+            "digest": "47fd81f888f4ff1d735a224983bb4ecdb4726960ab560862d938949a1d7b8fe8"
+          },
+          {
+            "source_id": "requirement-HW-WATER",
+            "algorithm": "sha256",
+            "digest": "7109947ba335f85a2c2e75a72941bbaf2d6887b2a1fbd974246cb88134ca5aea"
+          }
+        ],
+        "generator": {
+          "contract_id": "home-heat-water/readme-md-db/v1",
+          "tool_identity": "home-heat-water/readme-generator@1"
+        },
+        "configuration_digest": "3c577edc5aacbc317eff86a776781e7201efbadf4d06f35b3bbaf6fb35e97fdf",
+        "output_identity": {
+          "algorithm": "sha256",
+          "digest": "a94d78b5bac4135f7be2e5dcbf206c82aed6e7d367c9753b4e8c5b2885001a12"
+        },
+        "evidence": []
+      },
+      "current_generator": {
+        "tool_identity": "home-heat-water/readme-generator@1",
+        "configuration_digest": "3c577edc5aacbc317eff86a776781e7201efbadf4d06f35b3bbaf6fb35e97fdf"
+      }
+    }
+  ]
+}

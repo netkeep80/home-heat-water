@@ -54,3 +54,19 @@ relations:
     target:
       kind: artifact
       path: "tests/network.test.mjs"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "scripts/render-readme.mjs"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "model/readme-model.json"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: ".repo-guard/projections.json"
+  - predicates: [verified_by]
+    target:
+      kind: artifact
+      path: "tests/readme-projection.test.mjs"
