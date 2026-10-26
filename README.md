@@ -31,6 +31,7 @@
 - [Сезонные режимы: лето/межсезонье/зима × ночь/день](docs/15-operating-scenarios.md)
 - [ГВС](docs/35-hot-water.md)
 - [Теплоаккумуляторы](docs/40-thermal-storage-options.md)
+- [Компоновки на площадке 75 × 170 см](docs/45-layout-alternatives.md)
 - [Решения](docs/50-decisions.md)
 - [Происхождение данных](docs/90-provenance.md)
 - [Backlog](planning/backlog.md)
@@ -60,5 +61,7 @@ GitHub Issues → изменения → PR → независимая пров�
 Также: [#8 запах/тяга](https://github.com/netkeep80/home-heat-water/issues/8), [#9 самотёк/воздушная пробка](https://github.com/netkeep80/home-heat-water/issues/9), [#10 летнее ГВС](https://github.com/netkeep80/home-heat-water/issues/10), [#11 обслуживание ТЭНов](https://github.com/netkeep80/home-heat-water/issues/11), [#12 коррозия](https://github.com/netkeep80/home-heat-water/issues/12), [#13 требования](https://github.com/netkeep80/home-heat-water/issues/13).
 
 Дополнительно: [#15 — сезонные сценарии](https://github.com/netkeep80/home-heat-water/issues/15), [#16 — экономичная гидравлика](https://github.com/netkeep80/home-heat-water/issues/16).
+
+Новые задачи: [#18 — габариты и два ТА](https://github.com/netkeep80/home-heat-water/issues/18), [#19 — приоритет ГВС](https://github.com/netkeep80/home-heat-water/issues/19), [#20 — варианты компоновки](https://github.com/netkeep80/home-heat-water/issues/20).
 
 Исследовательские issues не означают одобрения закупки или монтажа.
