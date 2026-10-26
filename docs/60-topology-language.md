@@ -28,11 +28,11 @@
 
 Статическое приложение (`site/`) предоставляет: схему, выбор компонента/связи, инспектор, переключение трёх сценариев, ручную изоляцию двух кранов, структурный `PASS/FAIL/UNKNOWN`, идеальную оценку запаса тепла, импорт изменённого JSON через текстовое поле и экспорт в локальный файл. Это **не** multi-user редактор, пользовательская модель **не** коммитится в GitHub.
 
-Локальная сборка после `npm install`: `npm run build:pages` -> `public/`. Pages workflow `.github/workflows/pages.yml` вызывается вручную после включения **Settings → Pages → Build and deployment → GitHub Actions**. Пока настройка Pages не проверена/не включена, нельзя утверждать, что сайт опубликован. Не нужны сервер, API-токены или секреты.
+Локальная сборка после `npm install`: `npm run build:pages` -> `public/`. Pages workflow `.github/workflows/pages.yml` запускается при обновлении `main` и вручную после включения **Settings → Pages → Build and deployment → GitHub Actions**. Источник GitHub Pages настроен на GitHub Actions по скриншоту владельца; до успешного развертывания статус сайта неизвестен. Не нужны сервер, API-токены или секреты.
 
 ## RepoGuard
 
-RepoGuard v4.1.0 получает обычные `documents`, `implemented_by`, `verified_by` связи на файлы с точными путями. `SubjectRef` допускает durable JSON Pointer (например `/nodes/PUMP`, `/links/C08`), но **физические клапаны/трубы не нужно превращать в новые ядровые виды RepoGuard**.
+RepoGuard v5.0.0 получает обычные `documents`, `implemented_by`, `verified_by` связи на файлы с точными путями. `SubjectRef` допускает durable JSON Pointer (например `/nodes/PUMP`, `/links/C08`), но **физические клапаны/трубы не нужно превращать в новые ядровые виды RepoGuard**.
 
 ## Следующие границы
 

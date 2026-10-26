@@ -11,7 +11,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
-      - uses: netkeep80/repo-guard@6490ddc499ce01fa35b854dd4afbe0996d444165
+      - uses: netkeep80/repo-guard@98670b6f8638ceb4495fa77474efee468a4ebb81
         with:
           base: ${{ github.event.pull_request.base.sha }}
           head: ${{ github.event.pull_request.head.sha }}
