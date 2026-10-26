@@ -93,7 +93,7 @@
           {
             "source_id": "requirement-HW-HEAT",
             "algorithm": "sha256",
-            "digest": "a46f8e00669c43bac3f71a3eeb0b62df7be0faecb87b0e3d7e17911ebdec794f"
+            "digest": "d9f3b1c22628fc189d732db16a33a1d6d72060caa04b66079973b50f66194b02"
           },
           {
             "source_id": "requirement-HW-LANG",

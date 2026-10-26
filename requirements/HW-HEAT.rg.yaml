@@ -42,3 +42,7 @@ relations:
     target:
       kind: artifact
       path: "docs/60-topology-language.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/18-bathroom-branch.md"
