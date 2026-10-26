@@ -29,6 +29,7 @@
 - [Исходные данные по воде](docs/20-water-quality.md)
 - [Интерфейс с AES](docs/30-aes-integration.md)
 - [Сезонные режимы: лето/межсезонье/зима × ночь/день](docs/15-operating-scenarios.md)
+- [Аварийный сценарий ГВС при отключении ЛЭП](docs/17-grid-outage-dhw.md)
 - [ГВС](docs/35-hot-water.md)
 - [Теплоаккумуляторы](docs/40-thermal-storage-options.md)
 - [Компоновки на площадке 75 × 170 см](docs/45-layout-alternatives.md)
@@ -63,5 +64,7 @@ GitHub Issues → изменения → PR → независимая пров�
 Дополнительно: [#15 — сезонные сценарии](https://github.com/netkeep80/home-heat-water/issues/15), [#16 — экономичная гидравлика](https://github.com/netkeep80/home-heat-water/issues/16).
 
 Новые задачи: [#18 — габариты и два ТА](https://github.com/netkeep80/home-heat-water/issues/18), [#19 — приоритет ГВС](https://github.com/netkeep80/home-heat-water/issues/19), [#20 — варианты компоновки](https://github.com/netkeep80/home-heat-water/issues/20).
+
+Дополнительно: [#22 — ГВС от котла без ЛЭП](https://github.com/netkeep80/home-heat-water/issues/22).
 
 Исследовательские issues не означают одобрения закупки или монтажа.
