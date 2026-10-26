@@ -34,3 +34,11 @@ relations:
     target:
       kind: artifact
       path: "docs/42-pressure-system-options.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "model/photo-study.json"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/60-topology-language.md"

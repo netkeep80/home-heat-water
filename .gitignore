@@ -7,3 +7,6 @@ Thumbs.db
 *.tmp
 *.bak
 _private/
+
+# Generated GitHub Pages artifact
+public/

@@ -1,0 +1,232 @@
+{
+  "format": "home-topology/v0",
+  "id": "photo-study-2026-10-27",
+  "status": "illustrative_not_as_built",
+  "note": "A demonstration of topology expressiveness. Branch identities, routing, valve position, dimensions, and directions are NOT established by the photograph; do not use for installation or safety conclusions.",
+  "nodes": {
+    "STORE": {
+      "kind": "storage",
+      "name": "ТА — условная граница",
+      "ports": {
+        "supply": "heating_water",
+        "return": "heating_water"
+      },
+      "volume_l": 550,
+      "view": {
+        "x": 95,
+        "y": 270
+      },
+      "evidence": "owner_reported"
+    },
+    "J1": {
+      "kind": "junction",
+      "name": "Тройник №1",
+      "ports": {
+        "a": "heating_water",
+        "b": "heating_water",
+        "c": "heating_water"
+      },
+      "view": {
+        "x": 310,
+        "y": 260
+      },
+      "evidence": "hypothetical"
+    },
+    "V_MAIN": {
+      "kind": "valve",
+      "name": "Кран основной ветви",
+      "ports": {
+        "a": "heating_water",
+        "b": "heating_water"
+      },
+      "view": {
+        "x": 477,
+        "y": 120
+      },
+      "evidence": "hypothetical"
+    },
+    "FILTER": {
+      "kind": "strainer",
+      "name": "Косой фильтр",
+      "ports": {
+        "a": "heating_water",
+        "b": "heating_water"
+      },
+      "view": {
+        "x": 640,
+        "y": 120
+      },
+      "evidence": "photo_component_only"
+    },
+    "PUMP": {
+      "kind": "pump",
+      "name": "Grundfos ALPHA2",
+      "ports": {
+        "a": "heating_water",
+        "b": "heating_water"
+      },
+      "view": {
+        "x": 826,
+        "y": 120
+      },
+      "evidence": "owner_reported"
+    },
+    "J3": {
+      "kind": "junction",
+      "name": "Тройник прибора",
+      "ports": {
+        "a": "heating_water",
+        "b": "heating_water",
+        "c": "heating_water"
+      },
+      "view": {
+        "x": 1030,
+        "y": 250
+      },
+      "evidence": "hypothetical"
+    },
+    "GAUGE": {
+      "kind": "gauge",
+      "name": "Манометр",
+      "ports": {
+        "tap": "heating_water"
+      },
+      "view": {
+        "x": 1030,
+        "y": 70
+      },
+      "evidence": "photo_component_only"
+    },
+    "J2": {
+      "kind": "junction",
+      "name": "Тройник №2",
+      "ports": {
+        "a": "heating_water",
+        "b": "heating_water",
+        "c": "heating_water"
+      },
+      "view": {
+        "x": 805,
+        "y": 435
+      },
+      "evidence": "hypothetical"
+    },
+    "V_BYPASS": {
+      "kind": "valve",
+      "name": "Кран условного байпаса",
+      "ports": {
+        "a": "heating_water",
+        "b": "heating_water"
+      },
+      "view": {
+        "x": 450,
+        "y": 435
+      },
+      "evidence": "hypothetical"
+    }
+  },
+  "links": {
+    "C01": {
+      "a": "STORE.supply",
+      "b": "J1.a",
+      "kind": "pipe",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    },
+    "C02": {
+      "a": "J1.b",
+      "b": "V_MAIN.a",
+      "kind": "pipe",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    },
+    "C03": {
+      "a": "V_MAIN.b",
+      "b": "FILTER.a",
+      "kind": "pipe",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    },
+    "C04": {
+      "a": "FILTER.b",
+      "b": "PUMP.a",
+      "kind": "pipe",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    },
+    "C05": {
+      "a": "PUMP.b",
+      "b": "J3.a",
+      "kind": "pipe",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    },
+    "C06": {
+      "a": "J3.b",
+      "b": "J2.a",
+      "kind": "pipe",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    },
+    "C07": {
+      "a": "J3.c",
+      "b": "GAUGE.tap",
+      "kind": "instrument_tap",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    },
+    "C08": {
+      "a": "J1.c",
+      "b": "V_BYPASS.a",
+      "kind": "pipe",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    },
+    "C09": {
+      "a": "V_BYPASS.b",
+      "b": "J2.c",
+      "kind": "pipe",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    },
+    "C10": {
+      "a": "J2.b",
+      "b": "STORE.return",
+      "kind": "pipe",
+      "medium": "heating_water",
+      "evidence": "hypothetical"
+    }
+  },
+  "scenarios": {
+    "main": {
+      "label": "Основная ветвь",
+      "valves": {
+        "V_MAIN": "open",
+        "V_BYPASS": "closed"
+      }
+    },
+    "bypass": {
+      "label": "Обходная ветвь",
+      "valves": {
+        "V_MAIN": "closed",
+        "V_BYPASS": "open"
+      }
+    },
+    "isolated": {
+      "label": "Обе ветви перекрыты",
+      "valves": {
+        "V_MAIN": "closed",
+        "V_BYPASS": "closed"
+      }
+    }
+  },
+  "checks": {
+    "demo_path": {
+      "from": "STORE.supply",
+      "to": "STORE.return"
+    }
+  },
+  "assumptions": {
+    "delta_temperature_k": 40
+  }
+}
