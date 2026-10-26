@@ -13,7 +13,7 @@ test("README is a current RepoGuard v5 generated whole-file Projection",()=>{
 });
 test("source model contains no copied normative statements",()=>{
  const model=read("model/readme-model.json");
- for(const id of ["HW-CORE","HW-HEAT","HW-WATER","HW-AES","HW-PROCESS"]){
+ for(const id of JSON.parse(model).requirement_ids){
   const value=read("requirements/"+id+".rg.yaml");
   const literal=/^normative:\s*("(?:\\.|[^"\\])*")\s*$/m.exec(value)?.[1];
   assert.ok(literal);
