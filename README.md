@@ -28,6 +28,7 @@
 - [Потребности и требования](docs/10-requirements.md)
 - [Исходные данные по воде](docs/20-water-quality.md)
 - [Интерфейс с AES](docs/30-aes-integration.md)
+- [Сезонные режимы: лето/межсезонье/зима × ночь/день](docs/15-operating-scenarios.md)
 - [ГВС](docs/35-hot-water.md)
 - [Теплоаккумуляторы](docs/40-thermal-storage-options.md)
 - [Решения](docs/50-decisions.md)
@@ -57,5 +58,7 @@ GitHub Issues → изменения → PR → независимая пров�
 - [#5 — диагностика дефицита ГВС](https://github.com/netkeep80/home-heat-water/issues/5)
 
 Также: [#8 запах/тяга](https://github.com/netkeep80/home-heat-water/issues/8), [#9 самотёк/воздушная пробка](https://github.com/netkeep80/home-heat-water/issues/9), [#10 летнее ГВС](https://github.com/netkeep80/home-heat-water/issues/10), [#11 обслуживание ТЭНов](https://github.com/netkeep80/home-heat-water/issues/11), [#12 коррозия](https://github.com/netkeep80/home-heat-water/issues/12), [#13 требования](https://github.com/netkeep80/home-heat-water/issues/13).
+
+Дополнительно: [#15 — сезонные сценарии](https://github.com/netkeep80/home-heat-water/issues/15), [#16 — экономичная гидравлика](https://github.com/netkeep80/home-heat-water/issues/16).
 
 Исследовательские issues не означают одобрения закупки или монтажа.
