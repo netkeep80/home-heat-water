@@ -26,3 +26,7 @@ relations:
     target:
       kind: artifact
       path: "docs/15-operating-scenarios.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/45-layout-alternatives.md"
