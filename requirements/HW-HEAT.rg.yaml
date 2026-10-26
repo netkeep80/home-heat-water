@@ -1,0 +1,24 @@
+format: repo-guard/requirement-v1
+id: HW-HEAT
+normative: "Thermal storage alternatives MUST be compared using explicit assumptions, testable heat-energy calculations and source-qualified manufacturing evidence; a 50-year target MUST NOT be misrepresented as a proven service life."
+relations:
+  - predicates: [derives_from]
+    target:
+      kind: requirement
+      id: HW-CORE
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/40-thermal-storage-options.md"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "src/thermal.ts"
+  - predicates: [verified_by]
+    target:
+      kind: artifact
+      path: "tests/thermal.test.mjs"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "scripts/scenarios.mjs"

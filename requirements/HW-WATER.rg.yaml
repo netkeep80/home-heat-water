@@ -1,0 +1,16 @@
+format: repo-guard/requirement-v1
+id: HW-WATER
+normative: "The water supply and domestic-hot-water design MUST distinguish neighboring analyses from measurements of the owner's own well, and MUST distinguish hot-water capacity from recovery-rate problems."
+relations:
+  - predicates: [derives_from]
+    target:
+      kind: requirement
+      id: HW-CORE
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/20-water-quality.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/35-hot-water.md"

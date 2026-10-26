@@ -1,0 +1,17 @@
+name: RepoGuard causal compiler
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  causal-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: netkeep80/repo-guard@6490ddc499ce01fa35b854dd4afbe0996d444165
+        with:
+          base: ${{ github.event.pull_request.base.sha }}
+          head: ${{ github.event.pull_request.head.sha }}

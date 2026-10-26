@@ -1,0 +1,19 @@
+{
+  "name": "home-heat-water",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "House heating and water engineering calculations",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "scenarios": "node --experimental-strip-types scripts/scenarios.mjs",
+    "check": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=22.16.0"
+  }
+}

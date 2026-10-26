@@ -1,0 +1,32 @@
+format: repo-guard/requirement-v1
+id: HW-PROCESS
+normative: "Changes to project calculation code MUST have executable domain tests; project resources MUST remain causally attributable to explicit Requirements, and RepoGuard MUST use an immutable version pin."
+relations:
+  - predicates: [derives_from]
+    target:
+      kind: requirement
+      id: HW-CORE
+  - predicates: [requires]
+    target:
+      kind: artifact
+      path: "LICENSE"
+  - predicates: [requires]
+    target:
+      kind: artifact
+      path: ".gitignore"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "package.json"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "tsconfig.json"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: ".github/workflows/ci.yml"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: ".github/workflows/repo-guard.yml"

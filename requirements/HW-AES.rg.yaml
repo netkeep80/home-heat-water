@@ -1,0 +1,12 @@
+format: repo-guard/requirement-v1
+id: HW-AES
+normative: "Heating and water electrical-load requirements MUST be coordinated with the separate AES project without copying or silently modifying its authoritative electrical architecture."
+relations:
+  - predicates: [derives_from]
+    target:
+      kind: requirement
+      id: HW-CORE
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/30-aes-integration.md"

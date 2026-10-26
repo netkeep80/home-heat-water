@@ -1,0 +1,24 @@
+format: repo-guard/requirement-v1
+id: HW-CORE
+normative: "The project MUST distinguish observed as-is facts, engineering hypotheses and owner-accepted decisions; documents MUST NOT silently declare research options implemented or accepted."
+relations:
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "README.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/00-baseline.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/10-requirements.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/50-decisions.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "planning/backlog.md"
