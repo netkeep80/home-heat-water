@@ -22,3 +22,19 @@ relations:
     target:
       kind: artifact
       path: "planning/backlog.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/01-house-geometry.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/02-hydronics-as-is.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/03-observations.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/90-provenance.md"
