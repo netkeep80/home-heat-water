@@ -38,6 +38,12 @@
             "algorithm": "sha256"
           },
           {
+            "id": "requirement-HW-LANG",
+            "kind": "repository_content",
+            "path": "requirements/HW-LANG.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
             "id": "requirement-HW-PROCESS",
             "kind": "repository_content",
             "path": "requirements/HW-PROCESS.rg.yaml",
@@ -62,12 +68,12 @@
       "build": {
         "schema": "repo-guard/projection-build-record/v0",
         "projection_id": "home-heat-water.docs.readme",
-        "model_identity": "a093d5c6d517a3de45dc8f87c53fc553f702a8e00bc702ed07cd70b7646a5166",
+        "model_identity": "cd9f852e78a5d9a3c267ff34f273828c4f2f56cd82347e69051ec3ccb4006a76",
         "source_identities": [
           {
             "source_id": "presentation-model",
             "algorithm": "sha256",
-            "digest": "fcd7a22da84301b5a873a60ce0ee402aaa5ae6398ff6c9f6239d0875e195c4fd"
+            "digest": "1289fc2f770d4958d4237e4c8c659ad5cd129127b2173991b9aea53631149b5d"
           },
           {
             "source_id": "renderer",
@@ -77,27 +83,32 @@
           {
             "source_id": "requirement-HW-AES",
             "algorithm": "sha256",
-            "digest": "495eb183c175d0ef2caf64a2758e222699c40dd5028c3372e33231cad898bcaa"
+            "digest": "bfae39ccd0fe33f3dbf9aa89b1f2226a82fed2cb112a0c45cd970416a8d817e7"
           },
           {
             "source_id": "requirement-HW-CORE",
             "algorithm": "sha256",
-            "digest": "829813758fa950b99a3ce023f48e3fae952ada62b6114469a9b19bc90507bf57"
+            "digest": "9dee3a4332991529c1bbf80dd461008a1f3d5b9fa19f2a07ee08296b9f7f0210"
           },
           {
             "source_id": "requirement-HW-HEAT",
             "algorithm": "sha256",
-            "digest": "2d58b97bcc74772cc6e5011d25384051ef7fe7d8ce9286b0331739db3b61354a"
+            "digest": "a46f8e00669c43bac3f71a3eeb0b62df7be0faecb87b0e3d7e17911ebdec794f"
+          },
+          {
+            "source_id": "requirement-HW-LANG",
+            "algorithm": "sha256",
+            "digest": "09ee487eece78dc45253b8242b4436dc2ccf2a15a5ee90049a403f575b72bd37"
           },
           {
             "source_id": "requirement-HW-PROCESS",
             "algorithm": "sha256",
-            "digest": "47fd81f888f4ff1d735a224983bb4ecdb4726960ab560862d938949a1d7b8fe8"
+            "digest": "65bd8476aa363eefe7fd4b7b572ddf7c345dcb2d63f8c1093f6e1c4684f7f8e1"
           },
           {
             "source_id": "requirement-HW-WATER",
             "algorithm": "sha256",
-            "digest": "7109947ba335f85a2c2e75a72941bbaf2d6887b2a1fbd974246cb88134ca5aea"
+            "digest": "fc7ff90e9d7a62302143dc7efd3c3dc9fbc54fbbac8c72a8dfa765d8b3c3036e"
           }
         ],
         "generator": {
@@ -107,7 +118,7 @@
         "configuration_digest": "3c577edc5aacbc317eff86a776781e7201efbadf4d06f35b3bbaf6fb35e97fdf",
         "output_identity": {
           "algorithm": "sha256",
-          "digest": "a94d78b5bac4135f7be2e5dcbf206c82aed6e7d367c9753b4e8c5b2885001a12"
+          "digest": "16daaa0dd924db293dcee34026c721ec1c078a5adb6a91ea94cff9909fd62225"
         },
         "evidence": []
       },

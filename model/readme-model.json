@@ -40,9 +40,10 @@
     "HW-AES",
     "HW-CORE",
     "HW-HEAT",
+    "HW-LANG",
     "HW-PROCESS",
     "HW-WATER"
   ],
   "normative_heading": "Канонические требования (RepoGuard)",
-  "normative_intro": "Нормативные формулировки ниже извлекаются из `requirements/*.rg.yaml`, а не дублируются в модели README. Файл README.md генерируется RepoGuard Projection/MDDB и не редактируется вручную."
+  "normative_intro": "Нормативные формулировки ниже извлекаются из `requirements/*.rg.yaml`, а не дублируются в модели README. По метатребованию HW-LANG все требования и метатребования должны быть на русском языке; машинные идентификаторы и названия технологий сохраняются. Файл README.md генерируется RepoGuard Projection/MDDB и не редактируется вручную."
 }

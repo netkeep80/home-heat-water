@@ -90,24 +90,28 @@ GitHub Issues → изменения → PR → независимая пров�
 
 ## Канонические требования (RepoGuard)
 
-Нормативные формулировки ниже извлекаются из `requirements/*.rg.yaml`, а не дублируются в модели README. Файл README.md генерируется RepoGuard Projection/MDDB и не редактируется вручную.
+Нормативные формулировки ниже извлекаются из `requirements/*.rg.yaml`, а не дублируются в модели README. По метатребованию HW-LANG все требования и метатребования должны быть на русском языке; машинные идентификаторы и названия технологий сохраняются. Файл README.md генерируется RepoGuard Projection/MDDB и не редактируется вручную.
 
 ### HW-AES
 
-Heating and water electrical-load requirements MUST be coordinated with the separate AES project without copying or silently modifying its authoritative electrical architecture.
+Требования к электрическим нагрузкам отопления и водоснабжения должны согласовываться с отдельным проектом AES без копирования либо неявного изменения его исходной электрической архитектуры.
 
 ### HW-CORE
 
-The project MUST distinguish observed as-is facts, engineering hypotheses and owner-accepted decisions; documents MUST NOT silently declare research options implemented or accepted.
+Проект должен различать наблюдаемые факты существующей системы, инженерные гипотезы и решения, принятые владельцем; документация не должна без подтверждения объявлять исследуемые варианты реализованными или принятыми.
 
 ### HW-HEAT
 
-Thermal storage alternatives MUST be compared using explicit assumptions, testable heat-energy calculations and source-qualified manufacturing evidence; a 50-year target MUST NOT be misrepresented as a proven service life.
+Варианты теплоаккумуляторов должны сравниваться на основе явно указанных допущений, проверяемых расчётов запаса тепловой энергии и сведений об изготовлении, подтверждённых источниками; целевой срок 50 лет нельзя представлять как доказанный срок службы.
+
+### HW-LANG
+
+Все требования и метатребования проекта, включая будущие нормативные формулировки и требования-кандидаты, должны быть изложены на русском языке. Разрешены машинные идентификаторы и общепринятые названия технологий; англоязычные повествовательные формулировки недопустимы. Автоматическая проверка должна отклонять несоответствующие требования.
 
 ### HW-PROCESS
 
-Changes to project calculation code MUST have executable domain tests; project resources MUST remain causally attributable to explicit Requirements, and RepoGuard MUST use an immutable version pin.
+Изменения расчётного кода проекта должны сопровождаться исполняемыми предметными тестами; каждый ресурс проекта должен иметь явную причинную связь с требованиями, а RepoGuard должен использовать неизменяемую привязку к версии.
 
 ### HW-WATER
 
-The water supply and domestic-hot-water design MUST distinguish neighboring analyses from measurements of the owner's own well, and MUST distinguish hot-water capacity from recovery-rate problems.
+При проектировании водоснабжения и горячего водоснабжения необходимо отличать анализы воды соседних скважин от измерений собственной скважины владельца и различать недостаточную ёмкость горячего водоснабжения и недостаточную скорость восстановления нагрева.

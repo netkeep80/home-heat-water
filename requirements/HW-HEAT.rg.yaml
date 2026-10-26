@@ -1,6 +1,6 @@
 format: repo-guard/requirement-v1
 id: HW-HEAT
-normative: "Thermal storage alternatives MUST be compared using explicit assumptions, testable heat-energy calculations and source-qualified manufacturing evidence; a 50-year target MUST NOT be misrepresented as a proven service life."
+normative: "Варианты теплоаккумуляторов должны сравниваться на основе явно указанных допущений, проверяемых расчётов запаса тепловой энергии и сведений об изготовлении, подтверждённых источниками; целевой срок 50 лет нельзя представлять как доказанный срок службы."
 relations:
   - predicates: [derives_from]
     target:
