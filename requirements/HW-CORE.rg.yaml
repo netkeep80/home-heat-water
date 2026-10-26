@@ -1,6 +1,6 @@
 format: repo-guard/requirement-v1
 id: HW-CORE
-normative: "The project MUST distinguish observed as-is facts, engineering hypotheses and owner-accepted decisions; documents MUST NOT silently declare research options implemented or accepted."
+normative: "Проект должен различать наблюдаемые факты существующей системы, инженерные гипотезы и решения, принятые владельцем; документация не должна без подтверждения объявлять исследуемые варианты реализованными или принятыми."
 relations:
   - predicates: [documents]
     target:

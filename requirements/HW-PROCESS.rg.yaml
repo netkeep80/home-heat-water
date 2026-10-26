@@ -1,6 +1,6 @@
 format: repo-guard/requirement-v1
 id: HW-PROCESS
-normative: "Changes to project calculation code MUST have executable domain tests; project resources MUST remain causally attributable to explicit Requirements, and RepoGuard MUST use an immutable version pin."
+normative: "Изменения расчётного кода проекта должны сопровождаться исполняемыми предметными тестами; каждый ресурс проекта должен иметь явную причинную связь с требованиями, а RepoGuard должен использовать неизменяемую привязку к версии."
 relations:
   - predicates: [derives_from]
     target:

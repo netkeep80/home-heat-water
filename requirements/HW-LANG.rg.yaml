@@ -1,0 +1,20 @@
+format: repo-guard/requirement-v1
+id: HW-LANG
+normative: "Все требования и метатребования проекта, включая будущие нормативные формулировки и требования-кандидаты, должны быть изложены на русском языке. Разрешены машинные идентификаторы и общепринятые названия технологий; англоязычные повествовательные формулировки недопустимы. Автоматическая проверка должна отклонять несоответствующие требования."
+relations:
+  - predicates: [derives_from]
+    target:
+      kind: requirement
+      id: HW-CORE
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "scripts/check-requirements-language.mjs"
+  - predicates: [verified_by]
+    target:
+      kind: artifact
+      path: "tests/requirements-language.test.mjs"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/10-requirements.md"
