@@ -1,0 +1,48 @@
+{
+  "schema": "home-heat-water/readme-model/v1",
+  "title": "Home Heat & Water — инженерные системы дома",
+  "intro": "Проект фактического обследования, расчётов и поэтапной модернизации **отопления, горячего и холодного водоснабжения** дома (**85 м²**).\n\nСвязанный проект электроснабжения: [netkeep80/aes](https://github.com/netkeep80/aes). Электрическая архитектура принадлежит AES; здесь определяются нагрузки и требования со стороны отопления/водоснабжения.",
+  "sections": [
+    {
+      "heading": "Состояние",
+      "body": "**DISCOVERY / AS-IS.** Инженерные решения о закупке и монтаже не приняты. Отделяем наблюдаемые факты, гипотезы и решения владельца.\n\n- Котёл Metal-Fach SMART MAXI 30, дрова; существующая открытая гибридная система, 2 насоса Grundfos, 2 клапана-хлопушки для предусмотренного самотёка.\n- Самодельный ТА ~550 л из обычной стали ~3 мм, эксплуатируется около 6–7 лет.\n- Установлены 3 × 2 кВт ТЭНа, обычно используются 2 × 2 кВт в окне 23:00–07:00.\n- Бойлер косвенного нагрева ГВС 120 л заряжается естественной циркуляцией от ТА; производительности/ёмкости недостаточно, точная причина не установлена.\n- Источник воды — собственная скважина; анализ именно её воды ещё необходим."
+    },
+    {
+      "heading": "Цели",
+      "body": "- Максимально предсказуемая долговечность основных ТА, ориентир до 50 лет **как цель проектирования, не гарантия**.\n- Замена расходных электрических нагревателей без опорожнения основных ёмкостей.\n- Достаточные ГВС и холодное водоснабжение, выбор водоподготовки по измерениям.\n- Прозрачный расчёт теплового запаса, электрических нагрузок и совместимости с AES.\n- Сохранение аварийных защит и проверка монтажа профильными специалистами."
+    },
+    {
+      "heading": "Документы",
+      "body": "- [Текущая система](docs/00-baseline.md)\n- [Геометрия дома](docs/01-house-geometry.md)\n- [Гидравлика: фактическая обвязка](docs/02-hydronics-as-is.md)\n- [Наблюдения и проблемы](docs/03-observations.md)\n- [Потребности и требования](docs/10-requirements.md)\n- [Исходные данные по воде](docs/20-water-quality.md)\n- [Интерфейс с AES](docs/30-aes-integration.md)\n- [Сезонные режимы: лето/межсезонье/зима × ночь/день](docs/15-operating-scenarios.md)\n- [Аварийный сценарий ГВС при отключении ЛЭП](docs/17-grid-outage-dhw.md)\n- [ГВС](docs/35-hot-water.md)\n- [Теплоаккумуляторы](docs/40-thermal-storage-options.md)\n- [Давление и открытая/закрытая система](docs/42-pressure-system-options.md)\n- [Компоновки на площадке 75 × 170 см](docs/45-layout-alternatives.md)\n- [Решения](docs/50-decisions.md)\n- [Происхождение данных](docs/90-provenance.md)\n- [Backlog](planning/backlog.md)"
+    },
+    {
+      "heading": "Инженерные расчёты (TypeScript)",
+      "body": "```bash\nnpm install\nnpm run typecheck\nnpm test\nnpm run scenarios\n```\nМодель — первоначальная аналитика, не гидравлический или прочностной расчёт. Зафиксированы допущения, расчёты покрыты предметными тестами."
+    },
+    {
+      "heading": "RepoGuard 5.0.0",
+      "body": "Канонические проектные требования в `requirements/*.rg.yaml` с адресными `documents` / `implemented_by` / `verified_by` отношениями к реальным файлам. GitHub Actions использует **immutable pin** [RepoGuard v5.0.0](https://github.com/netkeep80/repo-guard/releases/tag/v5.0.0) (`98670b6f8638ceb4495fa77474efee468a4ebb81`). `repo-policy.json`, legacy service и внешнее разрешение изменений не используются. `repo-guard` проверяет причинную структуру файлов, но не заменяет предметные тесты или инженерную приёмку."
+    },
+    {
+      "heading": "Работа с проектом",
+      "body": "GitHub Issues → изменения → PR → независимая проверка; **принятие технического решения владельцем явно фиксируется**. Не публиковать персональные документы соседей, точные схемы доступа к дому и другие приватные материалы. Система может быть опасна при неправильной реконструкции; эта документация не является монтажным разрешением."
+    },
+    {
+      "heading": "Открытые задачи на GitHub",
+      "body": "- [#1 — инвентаризация as-is](https://github.com/netkeep80/home-heat-water/issues/1)\n- [#2 — долговечный теплоаккумулятор](https://github.com/netkeep80/home-heat-water/issues/2)\n- [#3 — анализ воды собственной скважины](https://github.com/netkeep80/home-heat-water/issues/3)\n- [#4 — интерфейс энергопотребления с AES](https://github.com/netkeep80/home-heat-water/issues/4)\n- [#5 — диагностика дефицита ГВС](https://github.com/netkeep80/home-heat-water/issues/5)\n\nТакже: [#8 запах/тяга](https://github.com/netkeep80/home-heat-water/issues/8), [#9 самотёк/воздушная пробка](https://github.com/netkeep80/home-heat-water/issues/9), [#10 летнее ГВС](https://github.com/netkeep80/home-heat-water/issues/10), [#11 обслуживание ТЭНов](https://github.com/netkeep80/home-heat-water/issues/11), [#12 коррозия](https://github.com/netkeep80/home-heat-water/issues/12), [#13 требования](https://github.com/netkeep80/home-heat-water/issues/13).\n\nДополнительно: [#15 — сезонные сценарии](https://github.com/netkeep80/home-heat-water/issues/15), [#16 — экономичная гидравлика](https://github.com/netkeep80/home-heat-water/issues/16).\n\nНовые задачи: [#18 — габариты и два ТА](https://github.com/netkeep80/home-heat-water/issues/18), [#19 — приоритет ГВС](https://github.com/netkeep80/home-heat-water/issues/19), [#20 — варианты компоновки](https://github.com/netkeep80/home-heat-water/issues/20).\n\nДополнительно: [#22 — ГВС от котла без ЛЭП](https://github.com/netkeep80/home-heat-water/issues/22).\n\nИсследовательские issues не означают одобрения закупки или монтажа.\n\nПроблема существующего ТА: **призматический корпус с выпучиванием стенок под давлением**. Возможность перехода на закрытую систему только исследуется, **решение не принято**. [#24](https://github.com/netkeep80/home-heat-water/issues/24)."
+    },
+    {
+      "heading": "Модель гидравлических портов и интерактивная схема (исследование)",
+      "body": "- **[Открыть интерактивную веб-страницу GitHub Pages](https://netkeep80.github.io/home-heat-water/)** (после первого успешного развёртывания).\n- [Описание языка и ограничений](docs/60-topology-language.md), [Issue #26](https://github.com/netkeep80/home-heat-water/issues/26).\n- `model/photo-study.json` — **демонстрационная гипотеза**, а не восстановленная по фотографии исполнительная схема.\n- `npm run check` проверяет порты, среды, граф и собирает `public/` для Pages.\n- GitHub Pages workflow запускается при обновлении `main` или вручную; GitHub Pages уже настроен на **GitHub Actions** со слов владельца. Не объявлять сайт опубликованным до фактического развёртывания."
+    }
+  ],
+  "requirement_ids": [
+    "HW-AES",
+    "HW-CORE",
+    "HW-HEAT",
+    "HW-PROCESS",
+    "HW-WATER"
+  ],
+  "normative_heading": "Канонические требования (RepoGuard)",
+  "normative_intro": "Нормативные формулировки ниже извлекаются из `requirements/*.rg.yaml`, а не дублируются в модели README. Файл README.md генерируется RepoGuard Projection/MDDB и не редактируется вручную."
+}

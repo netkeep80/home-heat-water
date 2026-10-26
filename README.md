@@ -1,3 +1,4 @@
+<!-- GENERATED: RepoGuard Projection/MDDB; edit model/readme-model.json or canonical requirements, not README.md -->
 # Home Heat & Water — инженерные системы дома
 
 Проект фактического обследования, расчётов и поэтапной модернизации **отопления, горячего и холодного водоснабжения** дома (**85 м²**).
@@ -5,6 +6,7 @@
 Связанный проект электроснабжения: [netkeep80/aes](https://github.com/netkeep80/aes). Электрическая архитектура принадлежит AES; здесь определяются нагрузки и требования со стороны отопления/водоснабжения.
 
 ## Состояние
+
 **DISCOVERY / AS-IS.** Инженерные решения о закупке и монтаже не приняты. Отделяем наблюдаемые факты, гипотезы и решения владельца.
 
 - Котёл Metal-Fach SMART MAXI 30, дрова; существующая открытая гибридная система, 2 насоса Grundfos, 2 клапана-хлопушки для предусмотренного самотёка.
@@ -14,6 +16,7 @@
 - Источник воды — собственная скважина; анализ именно её воды ещё необходим.
 
 ## Цели
+
 - Максимально предсказуемая долговечность основных ТА, ориентир до 50 лет **как цель проектирования, не гарантия**.
 - Замена расходных электрических нагревателей без опорожнения основных ёмкостей.
 - Достаточные ГВС и холодное водоснабжение, выбор водоподготовки по измерениям.
@@ -21,6 +24,7 @@
 - Сохранение аварийных защит и проверка монтажа профильными специалистами.
 
 ## Документы
+
 - [Текущая система](docs/00-baseline.md)
 - [Геометрия дома](docs/01-house-geometry.md)
 - [Гидравлика: фактическая обвязка](docs/02-hydronics-as-is.md)
@@ -39,6 +43,7 @@
 - [Backlog](planning/backlog.md)
 
 ## Инженерные расчёты (TypeScript)
+
 ```bash
 npm install
 npm run typecheck
@@ -48,12 +53,15 @@ npm run scenarios
 Модель — первоначальная аналитика, не гидравлический или прочностной расчёт. Зафиксированы допущения, расчёты покрыты предметными тестами.
 
 ## RepoGuard 5.0.0
+
 Канонические проектные требования в `requirements/*.rg.yaml` с адресными `documents` / `implemented_by` / `verified_by` отношениями к реальным файлам. GitHub Actions использует **immutable pin** [RepoGuard v5.0.0](https://github.com/netkeep80/repo-guard/releases/tag/v5.0.0) (`98670b6f8638ceb4495fa77474efee468a4ebb81`). `repo-policy.json`, legacy service и внешнее разрешение изменений не используются. `repo-guard` проверяет причинную структуру файлов, но не заменяет предметные тесты или инженерную приёмку.
 
 ## Работа с проектом
+
 GitHub Issues → изменения → PR → независимая проверка; **принятие технического решения владельцем явно фиксируется**. Не публиковать персональные документы соседей, точные схемы доступа к дому и другие приватные материалы. Система может быть опасна при неправильной реконструкции; эта документация не является монтажным разрешением.
 
 ## Открытые задачи на GitHub
+
 - [#1 — инвентаризация as-is](https://github.com/netkeep80/home-heat-water/issues/1)
 - [#2 — долговечный теплоаккумулятор](https://github.com/netkeep80/home-heat-water/issues/2)
 - [#3 — анализ воды собственной скважины](https://github.com/netkeep80/home-heat-water/issues/3)
@@ -71,3 +79,35 @@ GitHub Issues → изменения → PR → независимая пров�
 Исследовательские issues не означают одобрения закупки или монтажа.
 
 Проблема существующего ТА: **призматический корпус с выпучиванием стенок под давлением**. Возможность перехода на закрытую систему только исследуется, **решение не принято**. [#24](https://github.com/netkeep80/home-heat-water/issues/24).
+
+## Модель гидравлических портов и интерактивная схема (исследование)
+
+- **[Открыть интерактивную веб-страницу GitHub Pages](https://netkeep80.github.io/home-heat-water/)** (после первого успешного развёртывания).
+- [Описание языка и ограничений](docs/60-topology-language.md), [Issue #26](https://github.com/netkeep80/home-heat-water/issues/26).
+- `model/photo-study.json` — **демонстрационная гипотеза**, а не восстановленная по фотографии исполнительная схема.
+- `npm run check` проверяет порты, среды, граф и собирает `public/` для Pages.
+- GitHub Pages workflow запускается при обновлении `main` или вручную; GitHub Pages уже настроен на **GitHub Actions** со слов владельца. Не объявлять сайт опубликованным до фактического развёртывания.
+
+## Канонические требования (RepoGuard)
+
+Нормативные формулировки ниже извлекаются из `requirements/*.rg.yaml`, а не дублируются в модели README. Файл README.md генерируется RepoGuard Projection/MDDB и не редактируется вручную.
+
+### HW-AES
+
+Heating and water electrical-load requirements MUST be coordinated with the separate AES project without copying or silently modifying its authoritative electrical architecture.
+
+### HW-CORE
+
+The project MUST distinguish observed as-is facts, engineering hypotheses and owner-accepted decisions; documents MUST NOT silently declare research options implemented or accepted.
+
+### HW-HEAT
+
+Thermal storage alternatives MUST be compared using explicit assumptions, testable heat-energy calculations and source-qualified manufacturing evidence; a 50-year target MUST NOT be misrepresented as a proven service life.
+
+### HW-PROCESS
+
+Changes to project calculation code MUST have executable domain tests; project resources MUST remain causally attributable to explicit Requirements, and RepoGuard MUST use an immutable version pin.
+
+### HW-WATER
+
+The water supply and domestic-hot-water design MUST distinguish neighboring analyses from measurements of the owner's own well, and MUST distinguish hot-water capacity from recovery-rate problems.

@@ -8,7 +8,11 @@
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
     "scenarios": "node --experimental-strip-types scripts/scenarios.mjs",
-    "check": "npm run typecheck && npm test"
+    "check": "npm run typecheck && npm test && npm run build:pages && node scripts/render-readme.mjs --check",
+    "build:pages": "node scripts/build-pages.mjs",
+    "readme:check": "node scripts/render-readme.mjs --check",
+    "readme:outputs": "node scripts/render-readme.mjs --outputs",
+    "readme:state": "node scripts/render-readme.mjs --state"
   },
   "devDependencies": {
     "typescript": "5.9.3"

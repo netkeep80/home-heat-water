@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home Heat & Water — схема и сценарии</title>
+<style>
+:root{font:15px/1.45 system-ui,Segoe UI,Arial;background:#101723;color:#e7edf7;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;max-width:1640px;margin-inline:auto;padding:18px}
+header{display:flex;align-items:start;justify-content:space-between;gap:18px;flex-wrap:wrap}
+h1{font-size:1.4rem;margin:.15rem 0}p{margin:.45rem 0;color:#b6c6da}
+.warning{border:1px solid #8d7045;background:#372d22;border-radius:8px;padding:10px;color:#f5d7a6}
+main{display:grid;grid-template-columns:minmax(0,2fr) minmax(320px,1fr);gap:16px;margin-top:16px}
+section,aside{border:1px solid #35425a;border-radius:10px;background:#1b2535;padding:14px}
+svg{background:#111b2b;border-radius:8px;width:100%;height:auto;max-height:72vh;border:1px solid #28384e}
+.node{cursor:pointer}.node rect{fill:#24364a;stroke:#7895b3;stroke-width:1.5;rx:9}
+.node:hover rect,.node.selected rect{stroke:#f7c875;stroke-width:3}
+.node text{fill:#f3f7ff;font-size:12px;text-anchor:middle;pointer-events:none}
+.edge{stroke:#6a9dc2;stroke-width:4;stroke-dasharray:7 4;cursor:pointer}
+.edge:hover,.edge.selected{stroke:#ffca72;stroke-width:7}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0}
+label{font-weight:600}select,input,button,textarea{border:1px solid #71849a;background:#172335;color:#f5f8fb;border-radius:5px;padding:7px}
+button{cursor:pointer}button:hover{background:#2a3d51}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#101723;padding:12px;border-radius:7px;max-height:320px;overflow:auto}
+small{color:#abc0d2}.result{font-weight:bold}
+.ok{color:#6ed9a3}.bad{color:#f7aa85}.unknown{color:#efd18b}
+footer{margin:20px 0;color:#bdccdc}a{color:#9ccdff}
+@media(max-width:900px){main{grid-template-columns:1fr}body{padding:10px}}
+</style>
+</head>
+<body>
+<header><div><h1>Home Heat & Water — инженерная сеть</h1>
+<p>Узлы, порты, трубы, варианты состояния клапанов, структурные проверки</p></div>
+<a href="https://github.com/netkeep80/home-heat-water">Исходный репозиторий</a></header>
+<div class="warning"><strong>ДЕМОНСТРАЦИОННАЯ ТОПОЛОГИЯ — НЕ ИСПОЛНИТЕЛЬНАЯ СХЕМА.</strong>
+Фото не доказывает скрытые соединения и направление потоков. Пунктирные трубы условные. Структурная достижимость не доказывает циркуляцию, давление или безопасность.</div>
+<main><section><div class="row"><label for="scenario">Сценарий</label><select id="scenario"></select>
+<label for="zoom">Масштаб</label><input type="range" id="zoom" min="75" max="160" value="100" step="5">
+<button id="reset">Сбросить модель</button></div>
+<svg id="diagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 570" role="img" aria-label="Интерактивная демонстрация условной топологии гидравлики"></svg>
+<p><small>Выберите компонент либо пунктирное соединение. Условные обозначения и параметры показаны справа.</small></p></section>
+<aside><h2 style="margin-top:0">Инспектор</h2>
+<div class="row"><label for="valve1">Главный кран</label><select id="valve1"><option value="open">Открыт</option><option value="closed">Закрыт</option></select>
+<label for="valve2">Байпас</label><select id="valve2"><option value="open">Открыт</option><option value="closed">Закрыт</option></select></div>
+<p id="diagnosis"></p><p id="energy"></p>
+<h3>Выбранный объект</h3><pre id="inspector">Выберите элемент схемы</pre>
+<h3>Редактирование модели (локально)</h3>
+<p><small>Можно вставить изменённый JSON и проверить его. Изменения не отправляются в GitHub и не считаются принятыми.</small></p>
+<textarea id="json" rows="6" style="width:100%" aria-label="Модель JSON"></textarea>
+<div class="row"><button id="apply">Применить JSON</button><button id="export">Скачать JSON</button></div>
+<p id="errors" role="status"></p></aside></main>
+<footer>Модель <code>home-topology/v0</code> · Визуализация и структурная проверка · <a href="https://github.com/netkeep80/home-heat-water/issues/26">Issue #26</a></footer>
+<script type="module" src="./app.js"></script>
+</body></html>

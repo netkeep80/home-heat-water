@@ -30,3 +30,43 @@ relations:
     target:
       kind: artifact
       path: ".github/workflows/repo-guard.yml"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "src/network.ts"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "site/index.html"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "site/app.js"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "scripts/build-pages.mjs"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: ".github/workflows/pages.yml"
+  - predicates: [verified_by]
+    target:
+      kind: artifact
+      path: "tests/network.test.mjs"
+  - predicates: [implemented_by]
+    target:
+      kind: artifact
+      path: "scripts/render-readme.mjs"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "model/readme-model.json"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: ".repo-guard/projections.json"
+  - predicates: [verified_by]
+    target:
+      kind: artifact
+      path: "tests/readme-projection.test.mjs"
