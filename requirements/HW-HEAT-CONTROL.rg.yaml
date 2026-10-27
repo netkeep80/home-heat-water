@@ -1,0 +1,16 @@
+format: repo-guard/requirement-v1
+id: HW-HEAT-CONTROL
+normative: "Система должна допускать раздельное управление отопительной циркуляцией через теплоаккумулятор и электрическим нагревом бойлера, включая одновременную и независимую работу или остановку этих функций с учётом обязательных защит и доступного электропитания."
+relations:
+  - predicates: [derives_from]
+    target:
+      kind: requirement
+      id: HW-DHW-ISOLATION
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/19-independent-dhw-summer-circulation.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/15-operating-scenarios.md"

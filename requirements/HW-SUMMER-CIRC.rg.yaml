@@ -1,0 +1,24 @@
+format: repo-guard/requirement-v1
+id: HW-SUMMER-CIRC
+normative: "Система отопления должна сохранять летнюю возможность циркуляции теплоносителя через подключённый теплоаккумулятор и отопительные приборы, включая существующую последовательную ветку ванной, без обязательного включения котла или электрического нагрева бойлера, для перераспределения тепла между помещениями."
+relations:
+  - predicates: [derives_from]
+    target:
+      kind: requirement
+      id: HW-HEAT-CONTROL
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/19-independent-dhw-summer-circulation.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/15-operating-scenarios.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/18-bathroom-branch.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/03-observations.md"
