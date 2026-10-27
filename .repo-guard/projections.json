@@ -32,9 +32,33 @@
             "algorithm": "sha256"
           },
           {
+            "id": "requirement-HW-DHW-ELECTRIC",
+            "kind": "repository_content",
+            "path": "requirements/HW-DHW-ELECTRIC.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "requirement-HW-DHW-GRAVITY",
+            "kind": "repository_content",
+            "path": "requirements/HW-DHW-GRAVITY.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "requirement-HW-DHW-ISOLATION",
+            "kind": "repository_content",
+            "path": "requirements/HW-DHW-ISOLATION.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
             "id": "requirement-HW-HEAT",
             "kind": "repository_content",
             "path": "requirements/HW-HEAT.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "requirement-HW-HEAT-CONTROL",
+            "kind": "repository_content",
+            "path": "requirements/HW-HEAT-CONTROL.rg.yaml",
             "algorithm": "sha256"
           },
           {
@@ -47,6 +71,12 @@
             "id": "requirement-HW-PROCESS",
             "kind": "repository_content",
             "path": "requirements/HW-PROCESS.rg.yaml",
+            "algorithm": "sha256"
+          },
+          {
+            "id": "requirement-HW-SUMMER-CIRC",
+            "kind": "repository_content",
+            "path": "requirements/HW-SUMMER-CIRC.rg.yaml",
             "algorithm": "sha256"
           },
           {
@@ -68,12 +98,12 @@
       "build": {
         "schema": "repo-guard/projection-build-record/v0",
         "projection_id": "home-heat-water.docs.readme",
-        "model_identity": "cd9f852e78a5d9a3c267ff34f273828c4f2f56cd82347e69051ec3ccb4006a76",
+        "model_identity": "3be50c0843358714209f512b079f369d75194ed989561822e998d36c5963a1c7",
         "source_identities": [
           {
             "source_id": "presentation-model",
             "algorithm": "sha256",
-            "digest": "1289fc2f770d4958d4237e4c8c659ad5cd129127b2173991b9aea53631149b5d"
+            "digest": "5f7c20e9ab24aef35faaaaca48db99c85fe4f6a852f8cdf766ec7bf8ef4bd9b9"
           },
           {
             "source_id": "renderer",
@@ -91,9 +121,29 @@
             "digest": "9dee3a4332991529c1bbf80dd461008a1f3d5b9fa19f2a07ee08296b9f7f0210"
           },
           {
+            "source_id": "requirement-HW-DHW-ELECTRIC",
+            "algorithm": "sha256",
+            "digest": "156368e35dbb1844d6f4d689c516b49f7133d9152211f237abf31d78638abf24"
+          },
+          {
+            "source_id": "requirement-HW-DHW-GRAVITY",
+            "algorithm": "sha256",
+            "digest": "f332e460f51491267abd0269959365e42a4f9a5bdb3be55fbb46b17463f9074f"
+          },
+          {
+            "source_id": "requirement-HW-DHW-ISOLATION",
+            "algorithm": "sha256",
+            "digest": "70f4440822cc6f1d25b301ea4656c02b9a0cb2a9980f074a3db0c4f50dda6345"
+          },
+          {
             "source_id": "requirement-HW-HEAT",
             "algorithm": "sha256",
             "digest": "d9f3b1c22628fc189d732db16a33a1d6d72060caa04b66079973b50f66194b02"
+          },
+          {
+            "source_id": "requirement-HW-HEAT-CONTROL",
+            "algorithm": "sha256",
+            "digest": "046c1613466e18a36500066f4100fff00d11b8600fc3a83ca59c09aa1cc2a30c"
           },
           {
             "source_id": "requirement-HW-LANG",
@@ -104,6 +154,11 @@
             "source_id": "requirement-HW-PROCESS",
             "algorithm": "sha256",
             "digest": "65bd8476aa363eefe7fd4b7b572ddf7c345dcb2d63f8c1093f6e1c4684f7f8e1"
+          },
+          {
+            "source_id": "requirement-HW-SUMMER-CIRC",
+            "algorithm": "sha256",
+            "digest": "2f823c0ea652b3301a9cbcbb2540e8ad52fe2c39a0405989e7308b77f810ed3b"
           },
           {
             "source_id": "requirement-HW-WATER",
@@ -118,7 +173,7 @@
         "configuration_digest": "3c577edc5aacbc317eff86a776781e7201efbadf4d06f35b3bbaf6fb35e97fdf",
         "output_identity": {
           "algorithm": "sha256",
-          "digest": "16daaa0dd924db293dcee34026c721ec1c078a5adb6a91ea94cff9909fd62225"
+          "digest": "405e47fd8ae52217e4cb0bee8f65a69715fcefd016b8b803a4c047ca9f67dbb7"
         },
         "evidence": []
       },

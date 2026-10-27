@@ -1,0 +1,16 @@
+format: repo-guard/requirement-v1
+id: HW-DHW-ELECTRIC
+normative: "Система должна обеспечивать электрический нагрев бойлера обслуживаемым внешним относительно корпуса бойлера нагревательным узлом с номинальной мощностью два киловатта, независимо от движения теплоносителя через отопительный теплоаккумулятор и состояния насоса отопления."
+relations:
+  - predicates: [derives_from]
+    target:
+      kind: requirement
+      id: HW-DHW-ISOLATION
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/19-independent-dhw-summer-circulation.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/35-hot-water.md"

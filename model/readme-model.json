@@ -13,7 +13,7 @@
     },
     {
       "heading": "Документы",
-      "body": "- [Текущая система](docs/00-baseline.md)\n- [Геометрия дома](docs/01-house-geometry.md)\n- [Гидравлика: фактическая обвязка](docs/02-hydronics-as-is.md)\n- [Наблюдения и проблемы](docs/03-observations.md)\n- [Потребности и требования](docs/10-requirements.md)\n- [Исходные данные по воде](docs/20-water-quality.md)\n- [Интерфейс с AES](docs/30-aes-integration.md)\n- [Сезонные режимы: лето/межсезонье/зима × ночь/день](docs/15-operating-scenarios.md)\n- [Аварийный сценарий ГВС при отключении ЛЭП](docs/17-grid-outage-dhw.md)\n- [ГВС](docs/35-hot-water.md)\n- [Теплоаккумуляторы](docs/40-thermal-storage-options.md)\n- [Давление и открытая/закрытая система](docs/42-pressure-system-options.md)\n- [Компоновки на площадке 75 × 170 см](docs/45-layout-alternatives.md)\n- [Решения](docs/50-decisions.md)\n- [Происхождение данных](docs/90-provenance.md)\n- [Backlog](planning/backlog.md)"
+      "body": "- [Текущая система](docs/00-baseline.md)\n- [Геометрия дома](docs/01-house-geometry.md)\n- [Гидравлика: фактическая обвязка](docs/02-hydronics-as-is.md)\n- [Наблюдения и проблемы](docs/03-observations.md)\n- [Потребности и требования](docs/10-requirements.md)\n- [Исходные данные по воде](docs/20-water-quality.md)\n- [Интерфейс с AES](docs/30-aes-integration.md)\n- [Сезонные режимы: лето/межсезонье/зима × ночь/день](docs/15-operating-scenarios.md)\n- [Аварийный сценарий ГВС при отключении ЛЭП](docs/17-grid-outage-dhw.md)\n- [ГВС](docs/35-hot-water.md)\n- [Принятая независимость ГВС и летняя циркуляция](docs/19-independent-dhw-summer-circulation.md)\n- [Теплоаккумуляторы](docs/40-thermal-storage-options.md)\n- [Давление и открытая/закрытая система](docs/42-pressure-system-options.md)\n- [Компоновки на площадке 75 × 170 см](docs/45-layout-alternatives.md)\n- [Решения](docs/50-decisions.md)\n- [Происхождение данных](docs/90-provenance.md)\n- [Backlog](planning/backlog.md)"
     },
     {
       "heading": "Инженерные расчёты (TypeScript)",
@@ -39,9 +39,14 @@
   "requirement_ids": [
     "HW-AES",
     "HW-CORE",
+    "HW-DHW-ELECTRIC",
+    "HW-DHW-GRAVITY",
+    "HW-DHW-ISOLATION",
     "HW-HEAT",
+    "HW-HEAT-CONTROL",
     "HW-LANG",
     "HW-PROCESS",
+    "HW-SUMMER-CIRC",
     "HW-WATER"
   ],
   "normative_heading": "Канонические требования (RepoGuard)",

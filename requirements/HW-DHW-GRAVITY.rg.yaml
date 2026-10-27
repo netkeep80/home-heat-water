@@ -1,0 +1,20 @@
+format: repo-guard/requirement-v1
+id: HW-DHW-GRAVITY
+normative: "Система должна сохранять возможность нагрева бойлера от твердотопливного котла естественной циркуляцией теплоносителя при полном отсутствии электропитания насосов; ни отдельный насос бойлера, ни насос отопления не должны быть обязательными для этого режима."
+relations:
+  - predicates: [derives_from]
+    target:
+      kind: requirement
+      id: HW-DHW-ISOLATION
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/19-independent-dhw-summer-circulation.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/17-grid-outage-dhw.md"
+  - predicates: [documents]
+    target:
+      kind: artifact
+      path: "docs/35-hot-water.md"
