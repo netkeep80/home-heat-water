@@ -53,9 +53,9 @@ npm run scenarios
 ```
 Модель — первоначальная аналитика, не гидравлический или прочностной расчёт. Зафиксированы допущения, расчёты покрыты предметными тестами.
 
-## RepoGuard 5.0.0
+## RepoGuard 6.0.0
 
-Канонические проектные требования в `requirements/*.rg.yaml` с адресными `documents` / `implemented_by` / `verified_by` отношениями к реальным файлам. GitHub Actions использует **immutable pin** [RepoGuard v5.0.0](https://github.com/netkeep80/repo-guard/releases/tag/v5.0.0) (`98670b6f8638ceb4495fa77474efee468a4ebb81`). `repo-policy.json`, legacy service и внешнее разрешение изменений не используются. `repo-guard` проверяет причинную структуру файлов, но не заменяет предметные тесты или инженерную приёмку.
+Канонические проектные требования в `requirements/*.rg.yaml` с адресными `documents` / `implemented_by` / `verified_by` отношениями к реальным файлам. GitHub Actions использует **immutable pin** [RepoGuard v6.0.0](https://github.com/netkeep80/repo-guard/releases/tag/v6.0.0) (`b8aaf22b11d8f045bc47b78f0a2a0808ae208b71`). `repo-policy.json`, legacy service и внешнее разрешение изменений не используются. `repo-guard` проверяет причинную структуру файлов, но не заменяет предметные тесты или инженерную приёмку.
 
 ## Работа с проектом
 

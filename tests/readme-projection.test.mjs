@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {renderReadme, expectedProjectionState,verifyReadme} from "../scripts/render-readme.mjs";
 const read=p=>readFileSync(new URL("../"+p,import.meta.url),"utf8");
-test("README is a current RepoGuard v5 generated whole-file Projection",()=>{
+test("README is a current RepoGuard v6 generated whole-file Projection",()=>{
  assert.equal(verifyReadme(),true);
  assert.equal(renderReadme(),read("README.md"));
  const projected=expectedProjectionState().entries[0];
@@ -22,10 +22,10 @@ test("source model contains no copied normative statements",()=>{
   assert.ok(read("README.md").includes(normative));
  }
 });
-test("generated README pins v5 and advertises the Pages URL",()=>{
+test("generated README pins v6 and advertises the Pages URL",()=>{
  const body=renderReadme();
  assert.match(body,/github\.io\/home-heat-water\//);
- assert.match(body,/98670b6f8638ceb4495fa77474efee468a4ebb81/);
+ assert.match(body,/b8aaf22b11d8f045bc47b78f0a2a0808ae208b71/);
  assert.ok(!body.includes("6490ddc499ce01fa35b854dd4afbe0996d444165"));
 });
 test("a simulated README manual edit diverges from deterministic projection",()=>{

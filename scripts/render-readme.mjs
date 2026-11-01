@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// RepoGuard v5 Projection/MDDB consumer: authoritative Requirements + authored presentation model -> README.
+// RepoGuard Projection/MDDB consumer: authoritative Requirements + authored presentation model -> README.
 // All projection identities are content addressed; no README source duplication and no network access.
 import {createHash} from "node:crypto";
 import {readFileSync} from "node:fs";
