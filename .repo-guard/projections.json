@@ -103,12 +103,12 @@
           {
             "source_id": "presentation-model",
             "algorithm": "sha256",
-            "digest": "5f7c20e9ab24aef35faaaaca48db99c85fe4f6a852f8cdf766ec7bf8ef4bd9b9"
+            "digest": "168b666d6648aa63b8b0afb48f674fbfe430d45ab1b8bb8fff24f3a2d28cc1ce"
           },
           {
             "source_id": "renderer",
             "algorithm": "sha256",
-            "digest": "9fe33b99bc5d0198836551f3bbcc642131617e547e7495cf263150a84395b15c"
+            "digest": "515d1f331748da36658997144df3be8261a37e6c98eef6b1f0a1aaab7e0ed0d9"
           },
           {
             "source_id": "requirement-HW-AES",
@@ -173,7 +173,7 @@
         "configuration_digest": "3c577edc5aacbc317eff86a776781e7201efbadf4d06f35b3bbaf6fb35e97fdf",
         "output_identity": {
           "algorithm": "sha256",
-          "digest": "405e47fd8ae52217e4cb0bee8f65a69715fcefd016b8b803a4c047ca9f67dbb7"
+          "digest": "e11e8e55b7353d5037963691058cd863d7c0035553d66ce0c8bfd2944885c6b9"
         },
         "evidence": []
       },
